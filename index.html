@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Txt</title>
+    <style>
+        body { background: #000; color: #0f0; padding: 20px; font-family: monospace; }
+        #text { white-space: pre-wrap; border: 1px solid #333; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div id="text">Đang tải...</div>
+    <script>
+        fetch('https://raw.githubusercontent.com/aihoi73737-eng/ngon-web-txt/main/ngonwar2026.txt')
+            .then(r => r.text())
+            .then(t => document.getElementById('text').innerText = t);
+    </script>
+</body>
+</html>
